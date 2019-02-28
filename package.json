@@ -2,7 +2,7 @@
   "name": "mws-restaurant-stage-1",
   "version": "1.0.0",
   "description": "Robin's Restaurant Reviews",
-  "main": "index.js",
+  "main": "main.js",
   "dependencies": {
     "mapbox-gl": "^0.53.0"
   },
