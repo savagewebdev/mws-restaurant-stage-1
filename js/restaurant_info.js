@@ -89,6 +89,11 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 
+  // add neat font for asian restaurants
+  if (cuisine.innerHTML == 'Asian') {
+    document.getElementById('restaurant-cuisine').style.fontFamily = 'Shojumaru,cursive';
+  }
+
   // fill operating hours
   if (restaurant.operating_hours) {
     fillRestaurantHoursHTML();
