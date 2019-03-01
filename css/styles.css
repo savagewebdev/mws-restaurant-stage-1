@@ -1,4 +1,8 @@
 @charset "utf-8";
+@font-face {
+font-family: "Shojumaru";
+src: url("https://fonts.googleapis.com/css?family=Shojumaru");
+}
 /* CSS Document */
 
 body,td,th,p{
