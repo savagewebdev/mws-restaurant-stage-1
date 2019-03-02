@@ -150,7 +150,14 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
+    let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+    if (w <= 411 ) {
+      return (`/img/resp_img/${restaurant.photograph}-small`);
+    } else {
     return (`/img/${restaurant.photograph}`);
+    }
   }
 
   /**
@@ -165,5 +172,5 @@ class DBHelper {
       })
       marker.addTo(newMap);
     return marker;
-  } 
+  }
 }
