@@ -2,8 +2,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     mkdir: {
-      options: {
-        create: ['img/resp_img']
+      all: {
+        options: {
+          create: ['img/resp_img']
+        }
       }
     },
     imageoptim: {
