@@ -189,9 +189,16 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 /* ================= Smartphones (Portait) ================= */
-@media only screen and (max-width : 411px) {
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@media only screen and (max-width : 425px) {
 	body, header, nav, main {
-		max-width: 411px;
+		max-width: 425px;
 	}
 
 	.inside body {
