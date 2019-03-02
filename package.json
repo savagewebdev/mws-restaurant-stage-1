@@ -6,7 +6,12 @@
   "dependencies": {
     "mapbox-gl": "^0.53.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-imageoptim": "^1.4.4",
+    "grunt-mkdir": "^1.0.0",
+    "grunt-responsive-images": "^1.10.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
