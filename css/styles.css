@@ -5,8 +5,22 @@ src: url("https://fonts.gstatic.com/s/shojumaru/v6/rax_HiWfutkLLnaKCtl8AxhfsUjQ8
 unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.flexslider .slides li {
-    position: relative;
+.flexslider {
+    width: 200px;
+    height: 200px;
+ }
+
+.flexslider .slides img {
+    width: 200px;
+    height: 200px;
+}
+
+#restaurants-list .slides {
+  background-color: #ccc;
+  display: block;
+  margin: 0;
+  /* width: 50vw; */
+  height: auto;
 }
 
 .flex-caption {
@@ -23,22 +37,25 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
 
 /* CSS Document */
 
-body,td,th,p{
+body,td,th,p {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
 	line-height: 1.5;
 }
+
 body {
 	background-color: #fdfdfd;
 	margin: 0;
 	position: relative;
 }
+
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
 }
+
 a {
 	color: orange;
 	text-decoration: none;
@@ -54,14 +71,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, canvas, details, figcaption, figure, footer, hgroup, menu, nav, section {
 	display: block;
 }
-/* #maincontent {
+#maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-} */
-/* #footer {
+}
+#footer {
   background-color: #444;
   color: #aaa;
   font-size: 2.5vw;
@@ -69,11 +86,15 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 7.5vw;
   text-align: center;
   text-transform: uppercase;
-} */
+}
 /* ====================== Navigation ====================== */
-/* nav {
+header {
+	height: 15vw;
+}
+
+nav {
 	width: 100%;
-  height: 20vw;
+  height: 15vw;
   background-color: #252831;
   text-align: center;
   position: fixed;
@@ -82,17 +103,16 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 
 nav h1 {
 	margin: auto;
-	padding: 6vw;
+	padding: 3vw;
 }
 
 nav h1 a {
 	color: #fff;
-  font-size: 5.5vw;
+  font-size: 3vw;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
-} */
-
+}
 
 #breadcrumb {
     padding: 10px 40px 16px;
@@ -127,11 +147,17 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
-/* #map {
-  height: 400px;
-  width: 100%;
-  background-color: #ccc;
-} */
+/* #map-container is the container for the entire map */
+#map-container {
+	height: 40vw;
+}
+
+#map {
+ width: 100%;
+ height: 40vw;
+ background-color: #ccc;
+ z-index: 1;
+}
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
