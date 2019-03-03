@@ -154,7 +154,7 @@ class DBHelper {
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
     if (w <= 411 ) {
-      return (`/img/resp_img/${restaurant.photograph}-small`);
+      return (`/img/resp_img/${restaurant.photograph}`);
     } else {
     return (`/img/${restaurant.photograph}`);
     }
