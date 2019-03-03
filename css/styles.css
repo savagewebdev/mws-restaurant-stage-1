@@ -74,6 +74,15 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, hgroup, menu, nav, section {
 	display: block;
 }
+
+option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
