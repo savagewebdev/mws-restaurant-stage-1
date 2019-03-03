@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
+$(document).ready(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
 /**
  * Fetch all neighborhoods and set their HTML.
  */
@@ -169,9 +174,9 @@ createRestaurantHTML = (restaurant) => {
   name.innerHTML = restaurant.name;
   li.append(name);
 
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
+  // $('.flexslider').flexslider({
+  //   animation: "slide"
+  // });
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;

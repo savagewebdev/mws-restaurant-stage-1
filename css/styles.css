@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css";
 @font-face {
 font-family: "Shojumaru";
 src: url("https://fonts.gstatic.com/s/shojumaru/v6/rax_HiWfutkLLnaKCtl8AxhfsUjQ8Q.woff2");
@@ -6,21 +7,29 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
 }
 
 .flexslider {
-    width: 200px;
-    height: 200px;
+  position: relative;
+  border: 4px solid #fff;
+  margin: auto;
+  padding: 0;
+  zoom: 1;
+  width: 320px;
+  height: auto;
  }
 
-.flexslider .slides img {
-    width: 200px;
-    height: 200px;
+ .flexslider .slides {
+     background-color: #ccc;
+     display: block;
+     margin: 0;
+     width: 50vw;
+     height: auto;
 }
 
-#restaurants-list .slides {
-  background-color: #ccc;
-  display: block;
-  margin: 0;
-  /* width: 50vw; */
-  height: auto;
+
+.flexslider .slides li {
+    width: 320px;
+    height: 320px;
+    margin-right: 0px;
+    display: block;
 }
 
 .flex-caption {
