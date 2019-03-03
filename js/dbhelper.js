@@ -150,9 +150,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
+    const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (w <= 411 ) {
       return (`/img/resp_img/${restaurant.photograph}`);
     } else {

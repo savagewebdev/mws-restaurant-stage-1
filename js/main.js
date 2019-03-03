@@ -165,6 +165,7 @@ createRestaurantHTML = (restaurant) => {
   li.append(image);
 
   const name = document.createElement('h1');
+  name.classList.add('flex-caption');
   name.innerHTML = restaurant.name;
   li.append(name);
 
