@@ -164,10 +164,14 @@ createRestaurantHTML = (restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('p');
   name.classList.add('flex-caption');
   name.innerHTML = restaurant.name;
   li.append(name);
+
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
