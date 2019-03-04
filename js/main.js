@@ -13,17 +13,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
-$(document).ready(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-  });
-});
-
-const Flexslider = $('#slider').data('flexslider'); // Flexslider object
 
 
-// slider.addSlide(obj), pos) accepts two parameters, a string/jQuery object and an index.
-// slider.removeSlide(obj) accepts one parameter, either an object to be removed, or an index.
+
+
 
 
 
@@ -138,7 +131,7 @@ resetRestaurants = (restaurants) => {
     self.markers.forEach(marker => marker.remove());
     // Remove slides too
     restaurants.forEach(restaurant => {
-    Flexslider.removeSlide(restaurant);
+    // slider.removeSlide(restaurant);
   })
   }
   self.markers = [];
