@@ -13,9 +13,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
-$(document).ready(function(){
-  $('#slider').slick({
-    setting-name: setting-value
+$( ".restaurant-img" ).promise().done(function() {
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
   });
 });
 
@@ -151,30 +154,30 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-  const li = document.createElement('li');
+  const li = document.createElement('div');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement('p');
-  name.classList.add('flex-caption');
-  name.innerHTML = restaurant.name;
-  li.append(name);
-
-  const neighborhood = document.createElement('p');
-  neighborhood.innerHTML = restaurant.neighborhood;
-  li.append(neighborhood);
-
-  const address = document.createElement('p');
-  address.innerHTML = restaurant.address;
-  li.append(address);
-
-  const more = document.createElement('a');
-  more.innerHTML = 'View Details';
-  more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  // const name = document.createElement('div');
+  // name.classList.add('caption');
+  // name.innerHTML = restaurant.name;
+  // li.append(name);
+  //
+  // const neighborhood = document.createElement('p');
+  // neighborhood.innerHTML = restaurant.neighborhood;
+  // li.append(neighborhood);
+  //
+  // const address = document.createElement('p');
+  // address.innerHTML = restaurant.address;
+  // li.append(address);
+  //
+  // const more = document.createElement('a');
+  // more.innerHTML = 'View Details';
+  // more.href = DBHelper.urlForRestaurant(restaurant);
+  // li.append(more)
 
   return li
 }
