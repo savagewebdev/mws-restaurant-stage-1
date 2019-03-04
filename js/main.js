@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
-$( ".restaurant-img" ).promise().done(function() {
-  $('.slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  });
+// $( ".restaurant-img" ).promise().done(function() {
+$('.slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
+// });
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -155,6 +155,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('div');
+  li.classList.add('slick-slide');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
