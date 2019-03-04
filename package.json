@@ -4,7 +4,8 @@
   "description": "Robin's Restaurant Reviews",
   "main": "main.js",
   "dependencies": {
-    "mapbox-gl": "^0.53.0"
+    "mapbox-gl": "^0.53.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "grunt": "^1.0.3",
