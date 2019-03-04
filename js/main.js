@@ -13,13 +13,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
-
-
-
-
-
-
-
+$(document).ready(function(){
+  $('#slider').slick({
+    setting-name: setting-value
+  });
+});
 
 /**
  * Fetch all neighborhoods and set their HTML.
