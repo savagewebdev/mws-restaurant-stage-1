@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
-// $( ".restaurant-img" ).promise().done(function() {
-$('.slider').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
+$(document).ready(function(){// $( ".restaurant-img" ).promise().done(function() {
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
 });
-// });
 
 /**
  * Fetch all neighborhoods and set their HTML.

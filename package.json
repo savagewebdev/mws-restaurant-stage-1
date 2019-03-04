@@ -15,7 +15,7 @@
   },
   "scripts": {
     "serve": "python -m SimpleHTTPServer 8000",
-    "build": "git status && git add . && echo'git commit -m `MESSAGE`'"
+    "build": "git status && git add . && echo'git commit -m MESSAGE'"
   },
   "repository": {
     "type": "git",
