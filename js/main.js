@@ -13,15 +13,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
-$(document).ready(function(){// $( ".restaurant-img" ).promise().done(function() {
-  $('.slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  });
-});
-
 /**
  * Fetch all neighborhoods and set their HTML.
  */
@@ -154,13 +145,23 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
+
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+
   const li = document.createElement('div');
   li.classList.add('slick-slide');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+
   li.append(image);
+
 
   // const name = document.createElement('div');
   // name.classList.add('caption');
