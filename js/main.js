@@ -13,17 +13,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
-$(document).ready(function(){
-  $('#restaurants-list').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    dots: true,
-    arrows: true,
-    autoplaySpeed: 2000,
-  });
-});
-
 /**
  * Fetch all neighborhoods and set their HTML.
  */
@@ -86,17 +75,17 @@ initMap = () => {
   self.newMap = L.map('map', {
         center: [40.722216, -73.987501],
         zoom: 12,
-        scrollWheelZoom: false,
-        trackResize: true
+        scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: 'pk.eyJ1Ijoicm9iaW51c21heGltdXMiLCJhIjoiY2pzbm5qY2doMGU5dzQ0bjU2eWZiZWJkeCJ9.Cm0M0FhRGX6dnLhQB6wa7g',
+    mapboxToken: '<your MAPBOX API KEY HERE>',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.streets'
   }).addTo(newMap);
+
   updateRestaurants();
 }
 
@@ -132,10 +121,6 @@ resetRestaurants = (restaurants) => {
   // Remove all map markers
   if (self.markers) {
     self.markers.forEach(marker => marker.remove());
-    // Remove slides too
-    restaurants.forEach(restaurant => {
-    // slider.removeSlide(restaurant);
-  })
   }
   self.markers = [];
   self.restaurants = restaurants;
@@ -144,9 +129,10 @@ resetRestaurants = (restaurants) => {
 /**
  * Create all restaurants HTML and add them to the webpage.
  */
-fillRestaurantsHTML = (restaurant) => {
-  $(restaurant).each(function() {
-    $('#restaurants-list').slick('slickAdd', createRestaurantHTML());
+fillRestaurantsHTML = (restaurants = self.restaurants) => {
+  const ul = document.getElementById('restaurants-list');
+  restaurants.forEach(restaurant => {
+    ul.append(createRestaurantHTML(restaurant));
   });
   addMarkersToMap();
 }
@@ -155,33 +141,29 @@ fillRestaurantsHTML = (restaurant) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-
-  const li = document.createElement('div');
-  li.classList.add('slick-slide');
+  const li = document.createElement('li');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
+  const name = document.createElement('h1');
+  name.innerHTML = restaurant.name;
+  li.append(name);
 
-  // const name = document.createElement('div');
-  // name.classList.add('caption');
-  // name.innerHTML = restaurant.name;
-  // li.append(name);
-  //
-  // const neighborhood = document.createElement('p');
-  // neighborhood.innerHTML = restaurant.neighborhood;
-  // li.append(neighborhood);
-  //
-  // const address = document.createElement('p');
-  // address.innerHTML = restaurant.address;
-  // li.append(address);
-  //
-  // const more = document.createElement('a');
-  // more.innerHTML = 'View Details';
-  // more.href = DBHelper.urlForRestaurant(restaurant);
-  // li.append(more)
+  const neighborhood = document.createElement('p');
+  neighborhood.innerHTML = restaurant.neighborhood;
+  li.append(neighborhood);
+
+  const address = document.createElement('p');
+  address.innerHTML = restaurant.address;
+  li.append(address);
+
+  const more = document.createElement('a');
+  more.innerHTML = 'View Details';
+  more.href = DBHelper.urlForRestaurant(restaurant);
+  li.append(more)
 
   return li
 }
