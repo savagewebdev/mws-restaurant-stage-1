@@ -151,11 +151,11 @@ class DBHelper {
    */
   static imageUrlForRestaurant(restaurant) {
     const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    if (w <= 425 ) {
+    if (w <= 425) {
       return (`/img/extrasmall/${restaurant.photograph}`);
-  } else if (w >= 426 || w <= 768) {
+  } else if (w >= 426 && w <= 768) {
       return (`/img/small/${restaurant.photograph}`);
-  } else if (w >= 769 || w <= 1024) {
+  } else if (w >= 769 && w <= 1024) {
       return (`/img/medium/${restaurant.photograph}`);
   } else {
       return (`/img/${restaurant.photograph}`);
