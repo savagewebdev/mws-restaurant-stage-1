@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     mkdir: {
       all: {
         options: {
-          create: ['img/resp_img']
+          create: ['img/extrasmall']
         }
       }
     },
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           imageAlpha: true,
           quitAfter: true
         },
-        src: ['img/resp_img']
+        src: ['img/extrasmall']
       },
     },
     responsive_images: {
@@ -23,16 +23,16 @@ module.exports = function(grunt) {
         options: {
           engine: 'gm',
           sizes: [{
-            name: 'small',
-            width: 320,
-            quality: 85
+            rename: false,
+            width: 140,
+            quality: 100
           }]
         },
       files: [{
         expand: true,
         src: ['**.{jpg,gif,png}'], // Files to be matched for the task.
         cwd: 'img', // Where the files are to be taken from.
-        dest: 'img/resp_img' // Where the new files are to be stored.
+        dest: 'img/extrasmall' // Where the new files are to be stored.
         }]
       }
     }

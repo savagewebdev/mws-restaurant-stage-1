@@ -152,7 +152,7 @@ class DBHelper {
   static imageUrlForRestaurant(restaurant) {
     const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (w <= 426 ) {
-      return (`/img/resp_img/${restaurant.photograph}`);
+      return (`/img/small/${restaurant.photograph}`);
     } else {
     return (`/img/${restaurant.photograph}`);
     }
