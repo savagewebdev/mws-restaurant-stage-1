@@ -277,3 +277,19 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* ====================== Mobile View ====================== */
+@media screen and (max-width: 250px) {
+
+  #restaurants-list li {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  font-family: Arial,sans-serif;
+  margin: 0 auto;
+  min-height: 380px;
+  padding: 0;
+  text-align: left;
+  width: 100vw;
+  }
+
+}
