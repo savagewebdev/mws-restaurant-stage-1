@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
+$(document).ready(function(){
+  $('#restaurants-list').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    dots: true,
+    arrows: true,
+    autoplaySpeed: 2000,
+  });
+});
+
 /**
  * Fetch all neighborhoods and set their HTML.
  */
@@ -133,10 +144,9 @@ resetRestaurants = (restaurants) => {
 /**
  * Create all restaurants HTML and add them to the webpage.
  */
-fillRestaurantsHTML = (restaurants = self.restaurants) => {
-  const ul = document.getElementById('restaurants-list');
-  restaurants.forEach(restaurant => {
-    ul.append(createRestaurantHTML(restaurant));
+fillRestaurantsHTML = (restaurant) => {
+  $(restaurant).each(function() {
+    $('#restaurants-list').slick('slickAdd', createRestaurantHTML());
   });
   addMarkersToMap();
 }
@@ -145,13 +155,6 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-
-  $('.slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  });
 
   const li = document.createElement('div');
   li.classList.add('slick-slide');
