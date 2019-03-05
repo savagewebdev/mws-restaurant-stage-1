@@ -154,7 +154,7 @@ class DBHelper {
    }
 
   static srcsetUrlForRestaurant(restaurant) {
-    return `/img/${restaurant.photograph} 1280w, /img/extrasmall/${restaurant.photograph} 425w, /img/small/${restaurant.photograph} 768w, /img/medium/${restaurant.photograph} 1024w`);
+    return (`/img/${restaurant.photograph} 1280w, /img/extrasmall/${restaurant.photograph} 425w, /img/small/${restaurant.photograph} 768w, /img/medium/${restaurant.photograph} 1024w`);
   }
 
 
