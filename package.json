@@ -15,9 +15,9 @@
   },
   "scripts": {
     "serve": "python -m SimpleHTTPServer 8000",
-    "prebuild": "git status",
-    "build": "git add .",
-    "postbuild": "echo 'git commit -m COMMENTS'"
+    "precommit": "git status",
+    "commit": "git add .",
+    "postcommit": "echo 'git commit -m COMMENTS'"
   },
   "repository": {
     "type": "git",
