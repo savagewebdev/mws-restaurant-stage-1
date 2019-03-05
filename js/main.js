@@ -14,6 +14,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 /**
+ * Enable touch on/off events in addition to mouse hovering.
+ */
+$(document).ready(function() {
+  $(".container").on('touchstart', function(event){
+    handleStart();
+  });
+  $(".container").on('touchend', function(event){
+    handleEnd();
+  });
+  $(".container").mouseenter(function(event) {
+    handleStart();
+  }).mouseleave(function(event) {
+    handleEnd();
+  });
+  function handleStart(){
+    let target = $(event.target);
+    let targetPanel = target.children(".panel");
+    targetPanel.slideDown('fast')
+  }
+  function handleEnd(){
+    let target = $(event.target);
+    let targetPanel = target.children(".panel");
+    targetPanel.slideUp('fast')
+  }
+});
+/**
  * Fetch all neighborhoods and set their HTML.
  */
 fetchNeighborhoods = () => {
@@ -141,34 +167,41 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-  const li = document.createElement('li');
-  li.className = 'container';
+  const a = document.createElement('a');
+  a.className = 'container';
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
-  li.append(name);
+  a.append(name);
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.srcset = DBHelper.srcsetUrlForRestaurant(restaurant);
-  li.append(image);
+  a.append(image);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  li.append(neighborhood);
+  a.append(neighborhood);
+
+  const div = document.createElement('div');
+  div.className = 'panel';
+  a.append(div);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  // li.append(address);
+  div.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  // li.append(more)
+  div.append(more)
 
-  return li
+  return div, a
 }
+
+
+
 
 /**
  * Add markers for current restaurants to the map.

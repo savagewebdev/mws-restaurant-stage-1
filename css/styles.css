@@ -16,19 +16,6 @@ body {
 	margin: 0;
 	position:relative;
 }
-ul, li {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
-}
-a {
-	color: orange;
-	text-decoration: none;
-}
-a:hover, a:focus {
-	color: #3397db;
-	text-decoration: none;
-}
 a img{
 	border: none 0px #fff;
 }
@@ -52,7 +39,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
-
 
 /* ====================== GridMe ====================== */
 .container {
@@ -161,7 +147,10 @@ nav h1 a {
   text-align: left;
 	left: auto;
 }
-#restaurants-list li {
+#restaurants-list a:hover {
+	background-color: #000000;
+}
+#restaurants-list a {
   background-color: #ffb84d;
 	height: 20vw;
   border: 2px dashed #000000;
@@ -170,6 +159,7 @@ nav h1 a {
   padding: 20px;
 	font-family: Arial,sans-serif;
   text-align: left;
+
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -182,7 +172,7 @@ nav h1 a {
 
 
 }
-#restaurants-list li h1 {
+#restaurants-list a h1 {
   color: #000000;
   font-family: Arial,sans-serif;
   font-size: 14pt;
@@ -198,7 +188,13 @@ nav h1 a {
   font-size: 11pt;
 	grid-area: post;
 }
-#restaurants-list li a {
+
+#restaurants-list div {
+  padding: 50px;
+  display: none;
+}
+
+#restaurants-list a a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
@@ -303,7 +299,7 @@ nav h1 a {
 /* ====================== Mobile View ====================== */
 @media screen and (max-width: 250px) {
 
-  #restaurants-list li {
+  #restaurants-list a {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
