@@ -49,8 +49,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	grid-template-areas:
 	"header header . picture"
 	"post . . picture";
-
-
 	min-height: 0;
 }
 /* ====================== Navigation ====================== */
@@ -197,6 +195,7 @@ nav h1 a {
 	margin: 15px;
   padding: 20px;
 	height: 20vw;
+	/* z-index: 1; */
 }
 
 #restaurants-list a a {
