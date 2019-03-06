@@ -16,29 +16,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
 /**
  * Enable touch on/off events in addition to mouse hovering.
  */
-$(document).ready(function() {
-  $(".container").on('touchstart', function(event){
-    handleStart();
-  });
-  $(".container").on('touchend', function(event){
-    handleEnd();
-  });
-  $(".container").mouseenter(function(event) {
-    handleStart();
-  }).mouseleave(function(event) {
-    handleEnd();
-  });
-  function handleStart(){
-    let target = $(event.target);
-    let targetPanel = target.children(".panel");
-    targetPanel.slideDown('fast')
-  }
-  function handleEnd(){
-    let target = $(event.target);
-    let targetPanel = target.children(".panel");
-    targetPanel.slideUp('fast')
-  }
-});
+// $(document).ready(function() {
+//   $(".container").on('touchstart', function(event){
+//     handleStart();
+//   });
+//   $(".container").on('touchend', function(event){
+//     handleEnd();
+//   });
+//   $(".container").mouseenter(function(event) {
+//     handleStart();
+//   }).mouseleave(function(event) {
+//     handleEnd();
+//   });
+//   function handleStart(){
+//     let target = $(event.target);
+//     let targetPanel = target.children(".panel");
+//     targetPanel.slideDown('fast')
+//   }
+//   function handleEnd(){
+//     let target = $(event.target);
+//     let targetPanel = target.children(".panel");
+//     targetPanel.slideUp('fast')
+//   }
+// });
 /**
  * Fetch all neighborhoods and set their HTML.
  */

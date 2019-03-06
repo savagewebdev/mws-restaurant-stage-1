@@ -152,8 +152,13 @@ nav h1 a {
 	left: auto;
 }
 #restaurants-list a:hover {
+	transform: scale(1.1);
 	background-color: #000000;
 }
+
+/* .grow { transition: all .2s ease-in-out; } */
+/* .grow:hover { transform: scale(1.1); } */
+
 #restaurants-list a {
   background-color: #ffb84d;
 	height: 20vw;
@@ -163,6 +168,7 @@ nav h1 a {
   padding: 20px;
 	font-family: Arial,sans-serif;
   text-align: left;
+	transition: all .2s ease-in-out;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -197,7 +203,6 @@ nav h1 a {
 	height: 20vw;
 	/* z-index: 1; */
 }
-
 #restaurants-list a a {
   background-color: orange;
   border-bottom: 3px solid #eee;
@@ -210,7 +215,6 @@ nav h1 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 /* ====================== Restaurant Details ====================== */
 .inside header {
   position: fixed;
