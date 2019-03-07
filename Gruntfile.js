@@ -40,6 +40,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mkdir');
   grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-responsive-images');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   // grunt.registerTask('test', ['jshint', 'qunit']);
   grunt.registerTask('default', ['mkdir', 'responsive_images', 'imageoptim']);
 };

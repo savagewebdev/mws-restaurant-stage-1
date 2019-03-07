@@ -4,6 +4,7 @@
   "description": "Robin's Restaurant Reviews",
   "main": "main.js",
   "dependencies": {
+    "grunt-contrib-watch": "^1.1.0",
     "mapbox-gl": "^0.53.0"
   },
   "devDependencies": {
