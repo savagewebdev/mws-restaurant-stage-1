@@ -35,22 +35,10 @@ module.exports = function(grunt) {
         dest: 'img/extrasmall' // Where the new files are to be stored.
         }]
       }
-    },
-    watch: {
-      css: {
-        files: ['js/*.js', 'css/*.css', '/*.html'],
-        options: {
-          livereload: {
-            host: 'localhost',
-            port: 8000
-          }
-        }
-      }
-  });
+    }
   grunt.loadNpmTasks('grunt-mkdir');
   grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('test', ['grunt-contrib-watch']);
   grunt.registerTask('default', ['mkdir', 'responsive_images', 'imageoptim']);
 };
