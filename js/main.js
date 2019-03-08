@@ -176,8 +176,9 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.srcset = DBHelper.srcsetUrlForRestaurant(restaurant);
+  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = DBHelper.altForRestaurant(restaurant);
   a.append(image);
 
   const neighborhood = document.createElement('p');
@@ -199,9 +200,6 @@ createRestaurantHTML = (restaurant) => {
 
   return div, a
 }
-
-
-
 
 /**
  * Add markers for current restaurants to the map.
