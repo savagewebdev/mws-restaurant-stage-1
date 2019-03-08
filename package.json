@@ -4,6 +4,7 @@
   "description": "Robin's Restaurant Reviews",
   "main": "main.js",
   "dependencies": {
+    "babel-core": "^6.26.3",
     "grunt-contrib-watch": "^1.1.0",
     "mapbox-gl": "^0.53.0",
     "react": "^16.8.4",
@@ -11,6 +12,9 @@
     "react-jsx": "^1.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-react-jsx-source": "^7.2.0",
     "grunt": "^1.0.3",
     "grunt-imageoptim": "^1.4.4",
     "grunt-mkdir": "^1.0.0",
