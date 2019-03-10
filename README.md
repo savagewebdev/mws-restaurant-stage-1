@@ -11,8 +11,7 @@
 ## Dependencies
 
 [Udacity Pre-Existing Code](https://github.com/udacity/mws-restaurant-stage-1) - Much of the app's pre-existing code has been provided by Udacity for use in the Stage 1 Restaurant Reviews Project.
-[Stack-overflow](https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript) - Public feedback to a question regarding viewpoint dimensions and JavaScript.
-[W3schools](https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_slide_toggle) - Used to reference JQuery's slide-toggle functionality.
+[W3schools](https://www.w3schools.com/) - Used to reference "Sticky Header", JQuery's slide-toggle functionality.
 [Mapbox](https://www.mapbox.com/) - A Map API used for the project.
 [leaflet.js](https://leafletjs.com/) - A UI leaflet framework for Mapbox API.
 
