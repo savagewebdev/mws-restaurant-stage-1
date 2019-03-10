@@ -11,7 +11,8 @@
 ## Dependencies
 
 [Udacity Pre-Existing Code](https://github.com/udacity/mws-restaurant-stage-1) - Much of the app's pre-existing code has been provided by Udacity for use in the Stage 1 Restaurant Reviews Project.
-[W3schools](https://www.w3schools.com/) - Used to reference "Sticky Header", JQuery's slide-toggle functionality.
+[W3schools](https://www.w3schools.com/) - Used to reference "Sticky Header",
+[Stack-overflow](https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll) - Disable horizontal scrolling.
 [Mapbox](https://www.mapbox.com/) - A Map API used for the project.
 [leaflet.js](https://leafletjs.com/) - A UI leaflet framework for Mapbox API.
 
