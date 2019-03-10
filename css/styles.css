@@ -16,7 +16,7 @@ body,td,th,p{
 	line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
+  background-color: #444;
 	margin: 0;
 	position: relative;
 }
@@ -30,11 +30,12 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-nav .stay {
-	position: fixed;
+.sticker {
+	position: sticky;
   top: 0;
-  width: 100%;
+  width: 100vw;
 	opacity: 0.5;
+	z-index: 2;
 }
 #maincontent {
   background-color: #f3f3f3;
@@ -70,14 +71,13 @@ nav {
 }
 nav h1 {
   margin: auto;
-	font-size: 4vw;
 	padding: 5.5vw;
 }
 nav h1 a {
   color: #fff;
   font-size: 4vw;
   font-weight: 200;
-  letter-spacing: 10px;
+  letter-spacing: 2vw;
   text-transform: uppercase;
 	text-decoration: none;
 }
@@ -118,7 +118,8 @@ nav h1 a {
  {
   height: 400px;
   width: 100vw;
-  background-color: #ccc;
+  background-color: inherit;
+	z-index: 1;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
@@ -211,7 +212,7 @@ nav h1 a {
 	margin: 15px;
   padding: 20px;
 	height: 20vw;
-	/* z-index: 1; */
+	z-index: 1;
 }
 #restaurants-list a a {
   background-color: orange;

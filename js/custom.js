@@ -1,15 +1,12 @@
 // Header Movement Listener
-window.onscroll = function() {
-  moveHeader();
-}
-const nav = $("nav");
-let ref = nav.offsetTop;
-function moveHeader() {
-  if (window.pageYOffset > ref) {
-    nav.addClass("stay");
+window.onscroll = function() {mySticker()};
+var topper = document.getElementById("myTopper");
+var sticker = topper.offsetTop;
+function mySticker() {
+  if (window.pageYOffset > sticker) {
+    topper.classList.add("sticker");
   } else {
-    nav.removeClass("stay");
+    topper.classList.remove("sticker");
   }
 }
-
 //
