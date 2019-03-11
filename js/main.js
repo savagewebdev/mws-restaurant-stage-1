@@ -62,7 +62,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('a');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
-    option.onclick = updateRestaurants(this);
+    option.onclick = updateRestaurants(neighborhood);
 
     select.append(option);
   });
@@ -92,7 +92,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('a');
     option.innerHTML = cuisine;
     option.value = cuisine;
-    option.onclick = updateRestaurants(this);
+    option.onclick = updateRestaurants(cuisine);
     select.append(option);
   });
 }
@@ -119,15 +119,18 @@ initMap = () => {
   updateRestaurants();
 }
 
-updateRestaurants = (e) => {
+updateRestaurants = (cuisine, neighborhood) => {
+  if (cuisine && neighborhood == null) {
+    cuisine, neighborhood = 'all'
+  }
   // const cSelect = document.getElementById('cuisines-select');
   // const nSelect = document.getElementById('neighborhoods-select');
 
   // const cIndex = cSelect.selectedIndex;
   // const nIndex = nSelect.selectedIndex;
 
-  const cuisine = e.value;
-  const neighborhood = e.value;
+  // const cuisine;
+  // const neighborhood;
 
   DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, (error, restaurants) => {
     if (error) { // Got an error!
@@ -135,6 +138,7 @@ updateRestaurants = (e) => {
     } else {
       resetRestaurants(restaurants);
       fillRestaurantsHTML();
+      closeNav();
     }
   })
 }

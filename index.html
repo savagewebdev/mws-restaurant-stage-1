@@ -14,7 +14,7 @@
   <header id="myTopper">
     <nav>
       <h1><a href="/">&#127869; Restaurant Reviews</a></h1>
-      <a onclick="openNav()">&#9881;</a>  <!-- Filter Icon Button   -->
+      <h2><a onclick="openNav()">&#9881;</a><h2>  <!-- Filter Icon Button   -->
     </nav>
   </header>
   <main id="maincontent">
@@ -27,12 +27,12 @@
           <!-- Button to close the overlay navigation -->
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <!-- Overlay content -->
-          <div class="neighborhoods-select" name="neighborhoods">
-            <a value="all" onclick="updateRestaurants(this)">All Neighborhoods</a>
+          <div class="neighborhoods-select" id="neighborhoods-select" name="neighborhoods">
+            <a value="all" onclick="updateRestaurants(this.value)">All Neighborhoods</a>
           </div>
 
-          <div class="cuisines-select" name="cuisines">
-            <a value="all" onclick="updateRestaurants(this)">All Cuisines</a>
+          <div class="cuisines-select" id="cuisines-select" name="cuisines">
+            <a value="all" onclick="updateRestaurants(this.value)">All Cuisines</a>
           </div>
         </div>
       <!-- <div class="filter-options">
