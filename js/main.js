@@ -59,9 +59,11 @@ fetchNeighborhoods = () => {
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
   neighborhoods.forEach(neighborhood => {
-    const option = document.createElement('option');
+    const option = document.createElement('a');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
+    option.onclick = updateRestaurants(this);
+
     select.append(option);
   });
 }
@@ -87,9 +89,10 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
 
   cuisines.forEach(cuisine => {
-    const option = document.createElement('option');
+    const option = document.createElement('a');
     option.innerHTML = cuisine;
     option.value = cuisine;
+    option.onclick = updateRestaurants(this);
     select.append(option);
   });
 }
@@ -116,15 +119,15 @@ initMap = () => {
   updateRestaurants();
 }
 
-updateRestaurants = () => {
-  const cSelect = document.getElementById('cuisines-select');
-  const nSelect = document.getElementById('neighborhoods-select');
+updateRestaurants = (e) => {
+  // const cSelect = document.getElementById('cuisines-select');
+  // const nSelect = document.getElementById('neighborhoods-select');
 
-  const cIndex = cSelect.selectedIndex;
-  const nIndex = nSelect.selectedIndex;
+  // const cIndex = cSelect.selectedIndex;
+  // const nIndex = nSelect.selectedIndex;
 
-  const cuisine = cSelect[cIndex].value;
-  const neighborhood = nSelect[nIndex].value;
+  const cuisine = e.value;
+  const neighborhood = e.value;
 
   DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, (error, restaurants) => {
     if (error) { // Got an error!
