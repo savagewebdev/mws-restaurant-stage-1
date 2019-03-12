@@ -22,27 +22,15 @@
       <section id="map-container">
         <div id="map"></div>
       </section>
-
-        <div id="myNav" class="filter-options"> <!-- overlay -->
-          <!-- Button to close the overlay navigation -->
+      <div class="filter-options" id="myNav" >
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <!-- Overlay content -->
-          <div class="neighborhoods-select" id="neighborhoods-select" name="neighborhoods">
-            <a value="all" onclick="updateRestaurants(this.value)">All Neighborhoods</a>
-          </div>
-
-          <div class="cuisines-select" id="cuisines-select" name="cuisines">
-            <a value="all" onclick="updateRestaurants(this.value)">All Cuisines</a>
-          </div>
-        </div>
-      <!-- <div class="filter-options">
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
-        </select>
+        </select> -->
         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
-      </div> -->
+      </div>
         <div id="restaurants-list"></div>
     </section>
   </main>

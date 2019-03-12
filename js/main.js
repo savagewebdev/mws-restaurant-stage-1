@@ -59,7 +59,7 @@ fetchNeighborhoods = () => {
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
   neighborhoods.forEach(neighborhood => {
-    const option = document.createElement('a');
+    const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
     option.onclick = updateRestaurants(neighborhood);
@@ -89,7 +89,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
 
   cuisines.forEach(cuisine => {
-    const option = document.createElement('a');
+    const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
     option.onclick = updateRestaurants(cuisine);
