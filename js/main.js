@@ -14,32 +14,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 /**
- * Enable touch on/off events in addition to mouse hovering.
- */
-// $(document).ready(function() {
-//   $(".container").on('touchstart', function(event){
-//     handleStart();
-//   });
-//   $(".container").on('touchend', function(event){
-//     handleEnd();
-//   });
-//   $(".container").mouseenter(function(event) {
-//     handleStart();
-//   }).mouseleave(function(event) {
-//     handleEnd();
-//   });
-//   function handleStart(){
-//     let target = $(event.target);
-//     let targetPanel = target.children(".panel");
-//     targetPanel.slideDown('fast')
-//   }
-//   function handleEnd(){
-//     let target = $(event.target);
-//     let targetPanel = target.children(".panel");
-//     targetPanel.slideUp('fast')
-//   }
-// });
-/**
  * Fetch all neighborhoods and set their HTML.
  */
 fetchNeighborhoods = () => {
@@ -119,18 +93,15 @@ initMap = () => {
   updateRestaurants();
 }
 
-updateRestaurants = (cuisine, neighborhood) => {
-  if (cuisine && neighborhood == null) {
-    cuisine, neighborhood = 'all'
-  }
-  // const cSelect = document.getElementById('cuisines-select');
-  // const nSelect = document.getElementById('neighborhoods-select');
+updateRestaurants = () => {
+  const cSelect = document.getElementById('cuisines-select');
+  const nSelect = document.getElementById('neighborhoods-select');
 
-  // const cIndex = cSelect.selectedIndex;
-  // const nIndex = nSelect.selectedIndex;
+  const cIndex = cSelect.selectedIndex;
+  const nIndex = nSelect.selectedIndex;
 
-  // const cuisine;
-  // const neighborhood;
+  const cuisine;
+  const neighborhood;
 
   DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, (error, restaurants) => {
     if (error) { // Got an error!
