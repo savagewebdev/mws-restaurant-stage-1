@@ -15,6 +15,7 @@
 [Stack-overflow](https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll) - Disable horizontal scrolling.
 [Mapbox](https://www.mapbox.com/) - A Map API used for the project.
 [leaflet.js](https://leafletjs.com/) - A UI leaflet framework for Mapbox API.
+[Hamburgers by Jonathan Suh](https://jonsuh.com/hamburgers/) - A CSS hamburger icon.
 
 ## Contributing
 
