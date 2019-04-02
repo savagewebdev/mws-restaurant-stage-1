@@ -12,14 +12,11 @@ function mySticker() {
 }
 /* Open when someone clicks on the span element */
 function openNav() {
-  document.getElementById("myNav").style.width = "25%";
-  hamburger.addEventListener("click", function() {
-  hamburger.className = "hamburger hamburger--elastic is-active";
-  })
+    if (hamburger.className != "hamburger hamburger--elastic is-active") {
+      document.getElementById("myNav").style.width = "25%";
+      hamburger.className = "hamburger hamburger--elastic is-active";
+    } else {
+      document.getElementById("myNav").style.width = "0%";
+      hamburger.className = "hamburger hamburger--elastic";
+    }
 };
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-hamburger.className = "hamburger hamburger--elastic";
-}
