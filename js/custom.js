@@ -6,11 +6,13 @@ var sticker = topper.offsetTop;
 function mySticker() {
   if (window.pageYOffset > sticker) {
     topper.classList.add("sticker");
+    document.getElementById("myNav").style.marginTop = "10vw";
   } else {
     topper.classList.remove("sticker");
+    document.getElementById("myNav").style.marginTop = "15vw";
   }
 }
-/* Open when someone clicks on the span element */
+
 function openNav() {
     if (hamburger.className != "hamburger hamburger--elastic is-active") {
       document.getElementById("myNav").style.width = "36%";
