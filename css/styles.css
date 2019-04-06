@@ -246,30 +246,26 @@ nav h1 a {
 	background-size: cover;
   list-style: outside none none;
   margin: 0;
-  padding: 20px 20px 60px;
-	width: calc(100vw - 30px);
+  padding: 0;
+	width: 100%
 	height: auto;
   text-align: left;
 	left: auto;
 }
 #restaurants-list a:hover {
-	transform: scale(1.1);
-	/* background-color: #000000; */
+	/* transform: scale(1.1); */
+	background-color: #000000;
 }
-
-/* .grow { transition: all .2s ease-in-out; } */
-/* .grow:hover { transform: scale(1.1); } */
 
 #restaurants-list a {
   background-color: #ffb84d;
 	height: 20vw;
   border: 2px dashed #000000;
 	border-radius: 20px;
-  margin: 15px;
+  margin: 0;
   padding: 20px;
 	font-family: Arial,sans-serif;
   text-align: left;
-	transition: all .2s ease-in-out;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
