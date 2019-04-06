@@ -109,7 +109,6 @@ updateRestaurants = () => {
     } else {
       resetRestaurants(restaurants);
       fillRestaurantsHTML();
-      closeNav();
     }
   })
 }
