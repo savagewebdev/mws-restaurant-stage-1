@@ -16,7 +16,7 @@
 [Mapbox](https://www.mapbox.com/) - A Map API used for the project.
 [leaflet.js](https://leafletjs.com/) - A UI leaflet framework for Mapbox API.
 [Hamburgers by Jonathan Suh](https://jonsuh.com/hamburgers/) - A CSS hamburger icon.
-
+https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
