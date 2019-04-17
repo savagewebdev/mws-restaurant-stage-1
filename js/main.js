@@ -147,7 +147,9 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const a = document.createElement('a');
   a.className = 'container';
-  a.onclick = addEventListener("click", myPanel());
+  a.onclick = function() { // Give it a named function and conditions
+    $("div", this).css('display', 'block');
+  };
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
@@ -165,7 +167,7 @@ createRestaurantHTML = (restaurant) => {
   a.append(neighborhood);
 
   const div = document.createElement('div');
-  div.className = 'panel--closed';
+  div.className = 'panel';
   a.append(div);
 
   const address = document.createElement('p');

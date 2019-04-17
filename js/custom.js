@@ -25,18 +25,6 @@ function openNav() {
     }
 };
 
-function myPanel() {
-  $( "#dataTable tbody" ).on( "click", "tr", function() {
-    console.log( $( this ).text() );
-  });
+// var myPanel = function() {
 
-  let panel = $("#restaurants-list div", this);
-  if (panel.className == "panel--closed"){
-    panel.css("display", "block");
-    panel.className = "panel--open";
-  } else {
-    panel.css("display", "none");
-    panel.className == "panel--closed"
-  }
-};
 // children(':nth-child(4)');
