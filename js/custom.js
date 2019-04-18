@@ -1,4 +1,5 @@
 var hamburger = document.querySelector("#hamburger"); // Hamburger selector
+var panel = document.getElementsByClassName("panel");
 // Header Movement Listener
 window.onscroll = function() {mySticker()};
 var topper = document.getElementById("myTopper");
@@ -25,6 +26,12 @@ function openNav() {
     }
 };
 
-// var myPanel = function() {
-
-// children(':nth-child(4)');
+function myPanel() {
+  if ($("div", this).hasClass("panel")) {
+    $("div", this).css('display', 'block');
+    $("div", this).addClass("panel--is-open")
+  } else {
+    $("div", this).css('display', 'none');
+    $("div", this).addClass("panel")
+  }
+};

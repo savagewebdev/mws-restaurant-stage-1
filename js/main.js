@@ -147,9 +147,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const a = document.createElement('a');
   a.className = 'container';
-  a.onclick = function() { // Give it a named function and conditions
-    $("div", this).css('display', 'block');
-  };
+  a.onclick = myPanel();
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
