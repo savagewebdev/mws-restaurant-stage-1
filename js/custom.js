@@ -27,11 +27,13 @@ function openNav() {
 };
 
 function myPanel() {
-  if ($("div", this).hasClass("panel")) {
+    if ($("div", this).hasClass("panel")) {
     $("div", this).css('display', 'block');
-    $("div", this).addClass("panel--is-open")
+    $("div", this).removeClass("panel");
+    $("div", this).addClass("panel-is-open");
   } else {
     $("div", this).css('display', 'none');
-    $("div", this).addClass("panel")
+    $("div", this).removeClass("panel-is-open");
+    $("div", this).addClass("panel");
   }
 };

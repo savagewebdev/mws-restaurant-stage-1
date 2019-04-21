@@ -147,7 +147,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const a = document.createElement('a');
   a.className = 'container';
-  a.onclick = myPanel();
+  a.onclick = (myPanel);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
