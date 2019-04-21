@@ -17,7 +17,7 @@
     "serve": "python -m SimpleHTTPServer 8000",
     "precommit": "git status",
     "commit": "git add .",
-    "postcommit": "echo 'git commit -m COMMENTS'"
+    "postcommit": "echo 'git commit -m COMMENTS then git push'"
   },
   "repository": {
     "type": "git",
