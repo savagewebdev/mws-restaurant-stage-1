@@ -145,7 +145,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-  const a = document.createElement('a');
+  const a = document.createElement('a'); // needs to be changed to button
   a.className = 'container';
   a.onclick = (myPanel);
   a.display = 'block';
