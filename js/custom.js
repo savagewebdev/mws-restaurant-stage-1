@@ -25,7 +25,7 @@ function openNav() {
       hamburger.className = "hamburger hamburger--elastic";
     }
 };
- // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible
+ 
 function myPanel() {
     if ($("div", this).hasClass("panel")) {
     $("div", this).css('display', 'block');
