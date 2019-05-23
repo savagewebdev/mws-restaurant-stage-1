@@ -79,13 +79,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* ====================== GridMe ====================== */
 .container {
 	display: flex;
-  height: auto;
-	/* grid-template-columns: 2fr 2fr 1fr 2fr;
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-areas:
-	"header header . picture"
-	"post . . picture";
-	min-height: 0; */
+  flex-direction: column;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -203,6 +197,7 @@ nav h1 a {
   padding: 20px;
 	font-family: Arial,sans-serif;
   text-align: left;
+  height: auto;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
