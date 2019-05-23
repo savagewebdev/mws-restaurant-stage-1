@@ -166,7 +166,7 @@ createRestaurantHTML = (restaurant) => {
   neighborhood.innerHTML = restaurant.neighborhood;
   a.append(neighborhood);
 
-  const div = document.createElement('div');
+  const div = document.createElement('button');
   div.className = 'panel';
   a.append(div);
 
