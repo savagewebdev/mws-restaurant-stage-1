@@ -145,7 +145,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-  const a = document.createElement('button'); // needs to be changed to button
+  const a = document.createElement('a'); // needs to be changed to button
   a.className = 'container';
   a.onclick = (myPanel);
   a.display = 'block';
@@ -172,14 +172,14 @@ createRestaurantHTML = (restaurant) => {
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  div.append(address);
+  a.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  div.append(more)
+  a.append(more)
 
-  return div, a
+  return a
 }
 
 /**
