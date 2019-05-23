@@ -78,13 +78,14 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 /* ====================== GridMe ====================== */
 .container {
-	display: grid;
-	grid-template-columns: 2fr 2fr 1fr 2fr;
+	display: flex;
+  height: auto;
+	/* grid-template-columns: 2fr 2fr 1fr 2fr;
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-areas:
 	"header header . picture"
 	"post . . picture";
-	min-height: 0;
+	min-height: 0; */
 }
 /* ====================== Navigation ====================== */
 nav {

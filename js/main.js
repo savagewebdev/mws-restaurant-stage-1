@@ -165,20 +165,16 @@ createRestaurantHTML = (restaurant) => {
   neighborhood.innerHTML = restaurant.neighborhood;
   a.append(neighborhood);
 
-  const div = document.createElement('div');
-  div.className = 'panel';
-  a.append(div);
-
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  div.append(address);
+  a.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  div.append(more)
+  a.append(more)
 
-  return div, a
+  return a;
 }
 
 /**
