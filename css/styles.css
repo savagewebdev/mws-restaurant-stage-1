@@ -77,14 +77,14 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   background-color: #aaa;
 }
 /* ====================== GridMe ====================== */
-
-
-button.container {
-  max-width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+.container {
+	display: grid;
+	grid-template-columns: 2fr 2fr 1fr 2fr;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas:
+	"header header . picture"
+	"post . . picture";
+	min-height: 0;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -209,7 +209,7 @@ nav h1 a {
   margin: 10px 0 10px;
   max-width: 100%;
 	grid-area: picture;
-	object-fit: contain;
+	object-fit: cover;
 	min-height: 0;
 }
 #restaurants-list a h1 {
