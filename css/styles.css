@@ -131,6 +131,7 @@ nav h1 a {
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
     color: #01447e;
+    opacity: 50%;
     text-decoration: none;
 }
 /* ====================== Map ====================== */
@@ -178,8 +179,7 @@ nav h1 a {
   list-style: outside none none;
   margin: 0;
   padding: 0;
-	width: 100%
-	height: auto;
+	width: 100%;
   text-align: left;
 	left: auto;
 }
