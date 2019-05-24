@@ -15,17 +15,22 @@ function mySticker() {
 }
 
 function openNav() {
+  var leaflet = document.getElementsByClassName("leaflet-top leaflet-left");
     if (hamburger.className != "hamburger hamburger--elastic is-active") {
       document.getElementById("myNav").style.width = "36%";
       document.getElementById("myNav").style.height = "19%";
       hamburger.className = "hamburger hamburger--elastic is-active";
+      leaflet.Classlist.remove("leaflet-top leaflet-left");
+      leaflet.Classlist.add("leaflet-top leaflet-right");
     } else {
       document.getElementById("myNav").style.width = "0%";
       document.getElementById("myNav").style.height = "0%";
       hamburger.className = "hamburger hamburger--elastic";
+      leaflet.Classlist.remove("leaflet-top leaflet-right");
+      leaflet.Classlist.add("leaflet-top leaflet-left");
     }
 };
- 
+
 function myPanel() {
     if ($("div", this).hasClass("panel")) {
     $("div", this).css('display', 'block');
