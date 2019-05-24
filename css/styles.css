@@ -183,10 +183,6 @@ nav h1 a {
   text-align: left;
 	left: auto;
 }
-#restaurants-list a:hover {
-	/* transform: scale(1.1); */
-	background-color: #000000;
-}
 
 #restaurants-list a {
   background-color: #ffb84d;
@@ -208,6 +204,7 @@ nav h1 a {
 	object-fit: cover;
 	min-height: 0;
 }
+
 #restaurants-list a h1 {
   color: #000000;
   font-family: Arial,sans-serif;
