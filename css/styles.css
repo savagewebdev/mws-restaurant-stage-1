@@ -178,7 +178,7 @@ nav h1 a {
 /*  Tablet-sized Views */
 @media screen and (min-width: 501px) and (max-width: 768px) {
   .container {
-    min-width: 50%;
+    width: 44vw;
   	display: flex;
     flex-direction: column;
   }
@@ -186,9 +186,9 @@ nav h1 a {
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .container {
-    max-width: 33vw;
+    width: 100;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
@@ -224,6 +224,8 @@ nav h1 a {
   text-align: left;
   height: auto;
 }
+
+/*  CSS for Images*/
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
@@ -413,20 +415,5 @@ nav h1 a {
     font-size: 40px;
     top: 15px;
     right: 35px;
-  }
-}
-
-/* ====================== Mobile View ====================== */
-@media screen and (max-width: 250px) {
-
-  #restaurants-list a {
-  background-color: #fff;
-  border: 2px solid #ccc;
-  font-family: Arial,sans-serif;
-  margin: 0 auto;
-  min-height: 380px;
-  padding: 0;
-  text-align: left;
-  width: 100vw;
   }
 }
