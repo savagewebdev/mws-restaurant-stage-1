@@ -76,12 +76,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 .hamburger-inner {
   background-color: #aaa;
 }
-/* ====================== GridMe ====================== */
-.container {
-  max-width: 40vw;
-	display: flex;
-  flex-direction: column;
-}
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
@@ -171,19 +165,51 @@ nav h1 a {
   width: 33vw;
 }
 /* ====================== Restaurant Listing ====================== */
+
+/*  Portrait phone view going up to landscape views */
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100vw;
+  	display: flex;
+    flex-direction: column;
+  }
+}
+
+/*  Tablet-sized Views */
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .container {
+    min-width: 50%;
+  	display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .container {
+    max-width: 33vw;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Desktop */
+  @media screen and (min-width: 1025px) {
+
+}
+
 #restaurants-list {
   color: #f3f3f3;
-	background-image: url(/img/foodie.png);
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  background-image: url(/img/foodie.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   list-style: outside none none;
   margin: 0;
   padding: 0;
-	width: 100%;
+  width: 100%;
   text-align: left;
-	left: auto;
+  left: auto;
   display: flex;
   flex-wrap: wrap;
 }
