@@ -155,6 +155,9 @@ createRestaurantHTML = (restaurant) => {
   a.append(name);
 
   const pic = document.createElement('picture'); // Picture created
+  const imago = document.createElement('img')
+  pic.append(imago);
+
   pic.className = 'restaurant-img';
   pic.alt = DBHelper.altForRestaurant(restaurant);
   const source_extrasmall = document.createElement('source');
@@ -169,12 +172,13 @@ createRestaurantHTML = (restaurant) => {
   const source_large = document.createElement('source');
   source_large.srcset = DBHelper.srcsetUrlForRestaurant(restaurant)[3];
   source_large.media = "(min-width: 1280px)"
-  pic.image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  imago.srcset = DBHelper.imageUrlForRestaurant(restaurant);
 
-  a.append(pic); pic.append(source);
-
-
-
+  a.append(pic);
+  pic.append(source_extrasmall);
+  pic.append(source_small);
+  pic.append(source_medium);
+  pic.append(source_large);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
