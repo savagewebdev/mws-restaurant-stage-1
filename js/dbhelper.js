@@ -154,7 +154,12 @@ class DBHelper {
    }
 
   static srcsetUrlForRestaurant(restaurant) {
-    return (`/img/extrasmall/${restaurant.photograph} 425w, /img/small/${restaurant.photograph} 768w, /img/medium/${restaurant.photograph} 1024w, /img/${restaurant.photograph} 1280w`);
+    return {
+       "sm" : `/img/extrasmall/${restaurant.photograph}`
+      , "s" : `/img/small/${restaurant.photograph}`
+      , "m" : `/img/medium/${restaurant.photograph}`
+      , "l" : `/img/${restaurant.photograph}`
+    };
   }
 
   static altForRestaurant(restaurant) {
