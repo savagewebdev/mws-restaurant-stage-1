@@ -156,7 +156,6 @@ createRestaurantHTML = (restaurant) => {
 
   const pic = document.createElement('picture'); // Picture created
   const imago = document.createElement('img')
-  pic.append(imago);
 
   pic.className = 'restaurant-img';
   pic.alt = DBHelper.altForRestaurant(restaurant);
@@ -179,6 +178,7 @@ createRestaurantHTML = (restaurant) => {
   pic.append(source_small);
   pic.append(source_medium);
   pic.append(source_large);
+  pic.append(imago);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
