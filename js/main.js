@@ -169,8 +169,8 @@ createRestaurantHTML = (restaurant) => {
   const source_large = document.createElement('source');
   source_large.srcset = DBHelper.srcsetUrlForRestaurant(restaurant)[3];
   source_large.media = "(min-width: 1280px)"
-  pic.img.srcset = DBHelper.imageUrlForRestaurant(restaurant);
-  
+  pic.image.src = DBHelper.imageUrlForRestaurant(restaurant);
+
   a.append(pic); pic.append(source);
 
 
