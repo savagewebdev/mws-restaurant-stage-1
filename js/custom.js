@@ -26,8 +26,6 @@ function openNav() {
       document.getElementById("myNav").style.width = "0%";
       document.getElementById("myNav").style.height = "0%";
       hamburger.className = "hamburger hamburger--elastic";
-      leaflet.Classlist.remove("leaflet-top leaflet-right");
-      leaflet.Classlist.add("leaflet-top leaflet-left");
     }
 };
 
