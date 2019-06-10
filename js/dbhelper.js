@@ -155,7 +155,7 @@ class DBHelper {
 
   static srcsetUrlForRestaurant(restaurant) {
     return {
-       "sm" : `/img/extrasmall/${restaurant.photograph}`
+       "xs" : `/img/extrasmall/${restaurant.photograph}`
       , "s" : `/img/small/${restaurant.photograph}`
       , "m" : `/img/medium/${restaurant.photograph}`
       , "l" : `/img/${restaurant.photograph}`
