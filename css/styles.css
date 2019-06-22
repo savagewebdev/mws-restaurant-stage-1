@@ -198,7 +198,8 @@ nav h1 a {
   background-color: #ccc;
   display: block;
   margin: 10px 0 10px;
-  width: 100%;
+  width: auto;
+  max-width: 100%
 	grid-area: picture;
 	object-fit:
 	min-height: 0;
@@ -374,14 +375,4 @@ nav h1 a {
   top: 20px;
   right: 45px;
   font-size: 60px;
-}
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .filter-options a {font-size: 20px}
-  .filter-options .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
 }
