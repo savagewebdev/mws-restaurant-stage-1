@@ -165,38 +165,6 @@ nav h1 a {
   width: 33vw;
 }
 /* ====================== Restaurant Listing ====================== */
-
-/*  Portrait phone view going up to landscape views */
-@media screen and (max-width: 500px) {
-  .container {
-    width: 100vw;
-  	display: flex;
-    flex-direction: column;
-  }
-}
-
-/*  Tablet-sized Views */
-@media screen and (min-width: 501px) and (max-width: 768px) {
-  .container {
-    width: 44vw;
-  	display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .container {
-    width: 100;
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-/* Desktop */
-  @media screen and (min-width: 1025px) {
-
-}
-
 #restaurants-list {
   color: #f3f3f3;
   background-image: url(/img/foodie.png);
@@ -230,9 +198,9 @@ nav h1 a {
   background-color: #ccc;
   display: block;
   margin: 10px 0 10px;
-  max-width: 100%;
+  width: 100%;
 	grid-area: picture;
-	object-fit: cover;
+	object-fit:
 	min-height: 0;
 }
 
