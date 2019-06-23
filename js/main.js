@@ -160,16 +160,16 @@ createRestaurantHTML = (restaurant) => {
   imago.className = 'restaurant-img';
   pic.alt = DBHelper.altForRestaurant(restaurant);
   const source_extrasmall = document.createElement('source');
-  source_extrasmall.media = "(min-width: 425px)"
+  source_extrasmall.media = "(max-width: 425px)"
   source_extrasmall.srcset = DBHelper.srcsetUrlForRestaurant(restaurant).xs;
   const source_small = document.createElement('source');
-  source_small.media = "(min-width: 768px)"
+  source_small.media = "(max-width: 768px)"
   source_small.srcset = DBHelper.srcsetUrlForRestaurant(restaurant).s;
   const source_medium = document.createElement('source');
-  source_medium.media = "(min-width: 1024px)"
+  source_medium.media = "(max-width: 1024px)"
   source_medium.srcset = DBHelper.srcsetUrlForRestaurant(restaurant).m;
   const source_large = document.createElement('source');
-  source_large.media = "(min-width: 1280px)"
+  source_large.media = "(min-width: 1025px)"
   source_large.srcset = DBHelper.srcsetUrlForRestaurant(restaurant).l;
   imago.src = DBHelper.imageUrlForRestaurant(restaurant);
 

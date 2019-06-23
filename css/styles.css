@@ -199,9 +199,9 @@ nav h1 a {
   display: block;
   margin: 10px 0 10px;
   width: auto;
-  max-width: 100%
+  max-width: 100%;
 	grid-area: picture;
-	object-fit:
+	object-fit: fill;
 	min-height: 0;
 }
 

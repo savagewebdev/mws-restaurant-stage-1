@@ -16,4 +16,6 @@
   }
 }
 
-/*  Right around 425px something goes awry.*/
+/*  Right around 425px something goes awry.
+364px seems to be the maximum width whereby the picture remains on par with the rest of the elements.
+*/
