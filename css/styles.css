@@ -198,8 +198,8 @@ nav h1 a {
   background-color: #ccc;
   display: block;
   margin: 10px 0 10px;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 	grid-area: picture;
 	object-fit: fill;
 	min-height: 0;
