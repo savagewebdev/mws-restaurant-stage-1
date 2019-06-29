@@ -1,4 +1,8 @@
 /* Desktop */
-  @media screen and (min-width: 1025px) {
-
+  @media screen and (min-width: 801px) {
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
 }
