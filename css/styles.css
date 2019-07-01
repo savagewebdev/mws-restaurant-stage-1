@@ -68,6 +68,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+
+ #footer > h3 > a > strong:link, #footer > h3 > a > strong:visited,  #footer > h3 > a > strong:active {
+  text-decoration: none;
+  color: #ffb84d;
+
+}
 /* ====================== Hamburger ====================== */
 #hamburger {
   margin: auto;
