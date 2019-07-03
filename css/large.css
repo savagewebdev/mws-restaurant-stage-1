@@ -1,8 +1,15 @@
 /* Desktop */
   @media screen and (min-width: 801px) {
+    /* body {
+      width: 1440px;
+    } */
+
     .container {
-      width: 100%;
+      width: 1440px;
       display: flex;
       flex-direction: row;
+    }
+    #restaurants-list a {
+      margin: 0 auto;
     }
 }
