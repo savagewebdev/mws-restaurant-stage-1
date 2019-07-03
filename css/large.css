@@ -1,9 +1,5 @@
 /* Desktop */
   @media screen and (min-width: 801px) {
-    /* body {
-      width: 1440px;
-    } */
-
     .container {
       width: 1440px;
       display: flex;
