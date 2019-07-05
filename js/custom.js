@@ -23,12 +23,16 @@ function openNav() {
       document.getElementById("myNav").style.height = "19%";
       hamburger.className = "hamburger hamburger--elastic is-active";
       leafletL.empty();
-      leafletR.html(leaflet);
+      L.control.zoom({
+        position:'topright'
+      }).addTo(newMap);
     } else {
       document.getElementById("myNav").style.width = "0%";
       document.getElementById("myNav").style.height = "0%";
       hamburger.className = "hamburger hamburger--elastic";
       leafletR.empty();
-      leafletL.html(leaflet);
+      L.control.zoom({
+        position:'topleft'
+      }).addTo(newMap);
     }
 };
