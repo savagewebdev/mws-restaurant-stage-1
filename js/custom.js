@@ -15,28 +15,20 @@ function mySticker() {
 }
 
 function openNav() {
-  var leaflet = document.getElementsByClassName("leaflet-top leaflet-left");
+  var leafletL = $("#map > div.leaflet-control-container > div.leaflet-top.leaflet-left");
+  var leafletR = $("#map > div.leaflet-control-container > div.leaflet-top.leaflet-right")
+  var leaflet = '<div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div>';
     if (hamburger.className != "hamburger hamburger--elastic is-active") {
       document.getElementById("myNav").style.width = "36%";
       document.getElementById("myNav").style.height = "19%";
       hamburger.className = "hamburger hamburger--elastic is-active";
-      leaflet.Classlist.remove("leaflet-top leaflet-left");
-      leaflet.Classlist.add("leaflet-top leaflet-right");
+      leafletL.empty();
+      leafletR.html(leaflet);
     } else {
       document.getElementById("myNav").style.width = "0%";
       document.getElementById("myNav").style.height = "0%";
       hamburger.className = "hamburger hamburger--elastic";
+      leafletR.empty();
+      leafletL.html(leaflet);
     }
-};
-
-function myPanel() {
-    if ($("div", this).hasClass("panel")) {
-    $("div", this).css('display', 'block');
-    $("div", this).removeClass("panel");
-    $("div", this).addClass("panel-is-open");
-  } else {
-    $("div", this).css('display', 'none');
-    $("div", this).removeClass("panel-is-open");
-    $("div", this).addClass("panel");
-  }
 };
