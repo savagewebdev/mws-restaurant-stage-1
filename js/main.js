@@ -92,7 +92,8 @@ initMap = () => {
         center: [40.722216, -73.987501],
         zoom: 12,
         scrollWheelZoom: false,
-        trackResize: true
+        trackResize: true,
+        zoomControl: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1Ijoicm9iaW51c21heGltdXMiLCJhIjoiY2pzbm5qY2doMGU5dzQ0bjU2eWZiZWJkeCJ9.Cm0M0FhRGX6dnLhQB6wa7g',
@@ -102,7 +103,9 @@ initMap = () => {
       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.streets'
   }).addTo(newMap);
-
+  L.control.zoom({
+        position:'bottomright'
+      }).addTo(newMap);
   updateRestaurants();
 }
 

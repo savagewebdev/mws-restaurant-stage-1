@@ -19,7 +19,7 @@
 https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible
 [hacklabo: Your first service worker](https://www.hacklabo.com/your-first-service-worker/) - A beginner's guide to ServiceWorkers.
-[Google's Progressive Web Apps Training: Caching Files with Service Worker](https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker#cachefallback) - Making the ServiceWorker offline-first.
+[Google's Progressive Web Apps Training: Caching Files with Service Worker](https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker#cachefallback) - Make the ServiceWorker prioritize offline access.
 
 ## Contributing
 

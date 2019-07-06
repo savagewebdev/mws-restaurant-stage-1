@@ -29,29 +29,23 @@ function mySticker() {
 }
 
 // Hamburger Functionality
-function openNav() {
+const openNav = function() {
   const select_one = document.querySelector("#neighborhoods-select");
   const select_two = document.querySelector("#cuisines-select");
   const navtab = document.querySelector("#myTopper > nav > h1 > a");
-    if (hamburger.className != "hamburger hamburger--elastic is-active") {
+    if (hamburger.className != "hamburger hamburger--elastic is-active") { // If it isn't active, then activate it.
       select_one.tabIndex = 1;
       select_two.tabIndex = 1;
       navtab.tabIndex = 2;
       document.getElementById("myNav").style.width = "36%";
       document.getElementById("myNav").style.height = "19%";
       hamburger.className = "hamburger hamburger--elastic is-active";
-      L.control.zoom({
-        position:'topright'
-      }).addTo(newMap);
-    } else {
+    } else { // Otherwise don't ativate it and return to normal.
       select_one.removeAttribute("tabIndex");
       select_two.removeAttribute("tabIndex");
       navtab.tabIndex = 1;
       document.getElementById("myNav").style.width = "0%";
       document.getElementById("myNav").style.height = "0%";
       hamburger.className = "hamburger hamburger--elastic";
-      L.control.zoom({
-        position:'topleft'
-      }).addTo(newMap);
     }
 };
