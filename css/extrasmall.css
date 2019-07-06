@@ -6,7 +6,7 @@
     flex-direction: column;
     }
 
-  #Restaurant-container {
+  #restaurant-container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
