@@ -4,6 +4,17 @@
     width: 100vw;
   	display: flex;
     flex-direction: column;
+    }
+
+  #Restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+  #restaurant-img {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
 
