@@ -8,9 +8,9 @@ window.onload = function() {
   restaurantbarTab.push(hamburger, navtab, foottab);
   restaurantbarTab.forEach(snack => {
     snack.tabIndex = 1;
+  });
   bartab.forEach(drink => {
     drink.tabIndex = 1;
-});
   });
 };
 
@@ -28,7 +28,7 @@ function mySticker() {
   }
 }
 
-// Hamburger Functionality 
+// Hamburger Functionality
 function openNav() {
   const select_one = document.querySelector("#neighborhoods-select");
   const select_two = document.querySelector("#cuisines-select");
