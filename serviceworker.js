@@ -1,5 +1,6 @@
 const cache_Name = 'restaurant-service-worker'; // Pun intended.
 
+// Register ServiceWorker cache array.
 const filestoCache = [
     '/',
     'css/extrasmall.css',
@@ -56,16 +57,18 @@ const filestoCache = [
     'img/medium/10.jpg',
 ];
 
+// Install the ServiceWorker.
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(cache_Name)
         .then(function(cache) {
-            console.log('Opened cache');
+            console.log('Opened cache successfully');
             return cache.addAll(filestoCache);
         })
     );
 });
 
+// Prioritize offline viewing.
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
