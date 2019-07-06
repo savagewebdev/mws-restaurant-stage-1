@@ -29,7 +29,7 @@ function mySticker() {
 }
 
 // Hamburger Functionality
-const openNav = function() {
+  function openNav() {
   const select_one = document.querySelector("#neighborhoods-select");
   const select_two = document.querySelector("#cuisines-select");
   const navtab = document.querySelector("#myTopper > nav > h1 > a");

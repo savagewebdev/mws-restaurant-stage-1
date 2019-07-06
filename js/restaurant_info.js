@@ -31,16 +31,21 @@ initMap = () => {
       self.newMap = L.map('map', {
         center: [restaurant.latlng.lat, restaurant.latlng.lng],
         zoom: 16,
-        scrollWheelZoom: false
+        trackResize: true,
+        scrollWheelZoom: false,
+        zoomControl: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
         mapboxToken: 'pk.eyJ1Ijoicm9iaW51c21heGltdXMiLCJhIjoiY2pzbm5qY2doMGU5dzQ0bjU2eWZiZWJkeCJ9.Cm0M0FhRGX6dnLhQB6wa7g',
-        maxZoom: 18,
+        maxZoom: 20,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
           'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         id: 'mapbox.streets'
       }).addTo(newMap);
+      L.control.zoom({
+            position:'bottomright'
+          }).addTo(newMap);
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
