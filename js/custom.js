@@ -40,7 +40,6 @@ function openNav() {
       document.getElementById("myNav").style.width = "36%";
       document.getElementById("myNav").style.height = "19%";
       hamburger.className = "hamburger hamburger--elastic is-active";
-      leafletL.empty();
       L.control.zoom({
         position:'topright'
       }).addTo(newMap);
@@ -51,7 +50,6 @@ function openNav() {
       document.getElementById("myNav").style.width = "0%";
       document.getElementById("myNav").style.height = "0%";
       hamburger.className = "hamburger hamburger--elastic";
-      leafletR.empty();
       L.control.zoom({
         position:'topleft'
       }).addTo(newMap);
