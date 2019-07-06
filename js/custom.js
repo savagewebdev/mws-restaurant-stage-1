@@ -1,5 +1,18 @@
-var hamburger = document.querySelector("#hamburger"); // Hamburger selector
-var panel = document.getElementsByClassName("panel");
+window.onload = function() {
+  const restaurantbarTab = [];
+  const hamburger = document.querySelector("#hamburger");
+  const select_one = document.querySelector("#neighborhoods-select");
+  const select_two = document.querySelector("#cuisines-select");
+  const navtab = document.querySelector("#myTopper > nav > h1 > a");
+  const hamtab = document.querySelector("#hamburger");
+  const bartab = document.querySelector("#restaurants-list > a > a");
+  const foottab = document.querySelector("#footer > h3 > a");
+  restaurantbarTab.push(hamburger, select_one, select_two, navtab, hamtab, bartab, foottab);
+  restaurantbarTab.forEach(item => {
+    item.tabIndex = 1;
+  });
+};
+
 // Header Movement Listener
 window.onscroll = function() {mySticker()};
 var topper = document.getElementById("myTopper");
@@ -15,10 +28,9 @@ function mySticker() {
 }
 
 function openNav() {
-  var leafletL = $("#map > div.leaflet-control-container > div.leaflet-top.leaflet-left");
-  var leafletR = $("#map > div.leaflet-control-container > div.leaflet-top.leaflet-right")
-  var leaflet = '<div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div>';
     if (hamburger.className != "hamburger hamburger--elastic is-active") {
+      select_one.tabIndex = 1;
+      select_two.tabIndex = 1;
       document.getElementById("myNav").style.width = "36%";
       document.getElementById("myNav").style.height = "19%";
       hamburger.className = "hamburger hamburger--elastic is-active";
@@ -27,6 +39,8 @@ function openNav() {
         position:'topright'
       }).addTo(newMap);
     } else {
+      select_one.removeAttribute("tabIndex");
+      select_two.removeAttribute("tabIndex");
       document.getElementById("myNav").style.width = "0%";
       document.getElementById("myNav").style.height = "0%";
       hamburger.className = "hamburger hamburger--elastic";
