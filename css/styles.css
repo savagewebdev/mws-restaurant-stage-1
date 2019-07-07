@@ -99,7 +99,7 @@ nav h1 a {
   font-weight: 100;
   letter-spacing: 1vw;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none#
 }
 #breadcrumb {
     padding: 3vw 5vw 3vw 6vw;
@@ -189,7 +189,7 @@ nav h1 a {
   flex-wrap: wrap;
 }
 
-#restaurants-list a {
+#restaurants-list li {
   background-color: #ffb84d;
   border: 2px dashed #000000;
 	border-radius: 20px;
@@ -212,7 +212,7 @@ nav h1 a {
 	min-height: 0;
 }
 
-#restaurants-list a h1 {
+#restaurants-list li h1 {
   color: #000000;
   font-family: Arial,sans-serif;
   font-size: 14pt;
@@ -223,20 +223,20 @@ nav h1 a {
   text-transform: uppercase;
 	grid-area: header;
 }
-#restaurants-list p {
+#restaurants-list li {
   margin: 0;
   font-size: 11pt;
 	grid-area: post;
 }
 
-#restaurants-list div {
+/* #restaurants-list div { Possibly needed deleted
   display: none;
 	margin: 15px;
   padding: 20px;
 	height: 20vw;
-	z-index: 1;
+	z-index: 1; */
 }
-#restaurants-list a a {
+#restaurants-list li a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
