@@ -299,8 +299,7 @@ nav h1 a {
   color: #999494
 }
 #restaurant-hours tr td {
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
+  padding: 1vw;
 }
 #restaurant-hours > tr:nth-child(7) > td:nth-child(2) {
   border-bottom-right-radius: 20px;
