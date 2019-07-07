@@ -6,20 +6,114 @@
     flex-direction: column;
     }
 
+/* Flex the main content as well as each restaurants' container */
+  #maincontent {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f3f3f3;
+    min-height: 100%;
+  }
   #restaurant-container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-}
-
-  #restaurant-img {
-    border-top-left-radius: 20px;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #fff;
+    padding: 140px 40px 30px;
+  }
+  #reviews-container h2 {
+    color: #f58500;
+    font-size: 24pt;
+    font-weight: 300;
+    letter-spacing: -1px;
+    padding-bottom: 1pt;
+  }
+  #restaurant-cuisine {
+    background-color: #333;
+    color: #ddd;
+    font-size: 12pt;
+    font-weight: 300;
+    letter-spacing: 10px;
+    margin: 0 0 20px;
+    padding: 2px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
     border-bottom-right-radius: 20px;
   }
 
+  #restaurant-img {
+    border-top-left-radius: 20px;
+    display: block;
+    object-fit: fill;
+    width: 100%;
+  }
 
-
-
+  /* Container element for the Review Section */
+  #reviews-container {
+    margin: 0 auto;
+    padding: 40px 20px 40px 20px;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #fff;
+    width: 100%;
+  }
+  /* Backbone element for the container below */
+  #reviews-list {
+    margin: 0;
+    padding: 0;
+  }
+  /* Container element for each individual review */
+  #reviews-list li {
+    background-color: #fff;
+    border: 2px solid #f3f3f3;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0 0 30px;
+    overflow: hidden;
+    padding: 0 20px 20px;
+    position: relative;
+    width: fit-content;
+    padding: 0;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  #reviews-list li p {
+    margin: 0 0 10px;
+  }
+  /* first p { */
+  .review-name {
+    width: calc(60% - 4.5vw);
+    padding: 2.5vw 0px 2.5vw 4.5vw;
+    font-size: 5vw;
+    color: #ffffff;
+    font-weight: 100;
+    border-top-left-radius: 20px;
+  }
+  /* second p { */
+  .review-date {
+    width: calc(40% - 5vw);
+    color: #c7c7c7;
+    padding: 3.50vw 5vw 2.5vw 0;
+    font-size: 3.25vw;
+  }
+  /* Third p { */
+  .review-rating {
+    font-size: 3.25vw;
+    padding: 0.75vw 2vw 0.75vw 2.5vw;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    background-color: #F8A500;
+    margin: 2vw 2vw 0 4vw;
+  }
+  /* Fourth p { */
+  .review-comments {
+    color: #999494;
+    background-color: #ffffff;
+    border-bottom-right-radius: 20px;
+    padding: 4vw;
+  }
 
 }
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -31,7 +125,3 @@
     right: 35px;
   }
 }
-
-/*  Right around 425px something goes awry.
-364px seems to be the maximum width whereby the picture remains on par with the rest of the elements.
-*/
