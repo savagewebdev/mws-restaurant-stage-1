@@ -84,7 +84,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
-  height: inherit;
+  height: 23vw;
   background-color: #444;
   text-align:center;
   display: flex;
@@ -95,19 +95,21 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 4vw;
-  font-weight: 200;
-  letter-spacing: 2vw;
+  font-size: 4.5vw;
+  font-weight: 100;
+  letter-spacing: 1vw;
   text-transform: uppercase;
-	text-decoration: none;
+  text-decoration: none;
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 3vw 5vw 3vw 6vw;
     list-style: none;
     background-color: #eee;
-    font-size: 5.5vw;
+    font-size: 4.5vw;
+    letter-spacing: 0.1vw;
     margin: 0;
     width: 100%;
+    height: 7vw;
 }
 
 /* Display list items side by side */
@@ -255,16 +257,17 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 83.5vw;
+  height: 76vw;
   position: relative;
   right: 0;
-  top: 10vw;
+  top: 36vw;
   width: 100%;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
+  margin: 0px
 }
 
 #restaurant-name {
