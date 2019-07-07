@@ -1,18 +1,18 @@
 let restaurant;
 var newMap;
 
-/*
-Create Mapbox and load api --> as suggested by Mapbox api.
-
-var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
-
-mapboxgl.accessToken = 'pk.eyJ1Ijoicm9iaW51c21heGltdXMiLCJhIjoiY2pzbm5qY2doMGU5dzQ0bjU2eWZiZWJkeCJ9.Cm0M0FhRGX6dnLhQB6wa7g';
-var map = new mapboxgl.Map({
-  container: 'YOUR_CONTAINER_ELEMENT_ID',
-  style: 'mapbox://styles/mapbox/streets-v11'
-});
 /**
-
+ * Serviceworker installation.
+ */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
 /**
  * Initialize map as soon as the page is loaded.
  */

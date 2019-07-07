@@ -68,11 +68,11 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
-
- #footer > h3 > a > strong {
+#footer > a > strong {
   text-decoration: none;
   color: #ffb84d;
 }
+
 /* ====================== Hamburger ====================== */
 #hamburger {
   margin: auto;
@@ -180,7 +180,7 @@ nav h1 a {
   list-style: outside none none;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   text-align: left;
   left: auto;
   display: flex;
@@ -267,11 +267,7 @@ nav h1 a {
   height: 100%;
   width: 100%;
 }
-.inside #footer {
-  bottom: 0;
-  position: absolute;
-  width: 50%;
-}
+
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;

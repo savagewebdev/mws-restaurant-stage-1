@@ -4,7 +4,7 @@ window.onload = function() {
   const hamburger = document.querySelector("#hamburger");
   const navtab = document.querySelector("#myTopper > nav > h1 > a");
   const bartab = document.querySelectorAll("#restaurants-list > a > a");
-  const foottab = document.querySelector("#footer > h3 > a");
+  const foottab = document.querySelector("#footer > a");
   restaurantbarTab.push(hamburger, navtab, foottab);
   restaurantbarTab.forEach(snack => {
     snack.tabIndex = 1;
