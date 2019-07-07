@@ -277,12 +277,33 @@ nav h1 a {
   text-transform: uppercase;
   line-height: 1.1;
 }
+
+/* Restaurant address and hours */
 #restaurant-address {
-  font-size: 12pt;
-  margin: 10px 0px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  padding: 2.5vw 3.5vw;
+  margin: 3vw 0 0 0;
+  color: #ffffff;
+  font-size: 3.5vw;
+  font-weight: bold;
+}
+#restaurant-hours {
+  border: 0px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom-right-radius: 20px;
 }
 #restaurant-hours td {
-  color: #666;
+  background-color: #fff;
+  color: #999494
+}
+#restaurant-hours tr td {
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+#restaurant-hours > tr:nth-child(7) > td:nth-child(2) {
+  border-bottom-right-radius: 20px;
 }
 
 /* The Overlay (background) */
