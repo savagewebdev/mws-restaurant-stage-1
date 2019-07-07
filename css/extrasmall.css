@@ -78,41 +78,41 @@
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
-  #reviews-list li p {
-    margin: 0 0 10px;
-  }
   /* first p { */
-  .review-name {
+  p.review-name {
     width: calc(60% - 4.5vw);
     padding: 2.5vw 0px 2.5vw 4.5vw;
+    margin: 0;
     font-size: 5vw;
     color: #ffffff;
     font-weight: 100;
     border-top-left-radius: 20px;
   }
   /* second p { */
-  .review-date {
+  p.review-date {
     width: calc(40% - 5vw);
     color: #c7c7c7;
     padding: 3.50vw 5vw 2.5vw 0;
+    margin: 0;
     font-size: 3.25vw;
   }
   /* Third p { */
-  .review-rating {
+  p.review-rating {
     font-size: 3.25vw;
     padding: 0.75vw 2vw 0.75vw 2.5vw;
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 500;
     background-color: #F8A500;
-    margin: 2vw 2vw 0 4vw;
+    margin: 4vw 2vw 0 4vw;
   }
   /* Fourth p { */
-  .review-comments {
+  p.review-comments {
     color: #999494;
     background-color: #ffffff;
     border-bottom-right-radius: 20px;
     padding: 4vw;
+    margin: 0;
   }
 
 }
