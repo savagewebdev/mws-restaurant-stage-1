@@ -21,6 +21,8 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible
 [hacklabo: Your first service worker](https://www.hacklabo.com/your-first-service-worker/) - A beginner's guide to ServiceWorkers.
 [Google's Progressive Web Apps Training: Caching Files with Service Worker](https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker#cachefallback) - Make the ServiceWorker prioritize offline access.
 
+https://www.w3schools.com/css/css3_shadows.asp
+
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.

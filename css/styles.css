@@ -190,14 +190,16 @@ nav h1 a {
 }
 
 #restaurants-list li {
-  background-color: #ffb84d;
-  border: 2px dashed #000000;
-	border-radius: 20px;
-  margin: 0;
+  background-color: #ebeef2;
+  border: 2px solid #ddd;
+  margin: 10px;
+  grid-area: post;
   padding: 20px;
-	font-family: Arial,sans-serif;
-  text-align: left;
+  font-family: Arial,sans-serif;
   height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 40px 40px 40px 40px;
+  text-align: -webkit-center;
 }
 
 /*  CSS for Images*/
@@ -215,38 +217,39 @@ nav h1 a {
 #restaurants-list li h1 {
   color: #000000;
   font-family: Arial,sans-serif;
-  font-size: 14pt;
-  font-weight: 200;
+  font-size: 5vw;
   letter-spacing: 0;
   line-height: 1.3;
-  margin: 20px 0 10px;
+  margin: 2.5vw;
   text-transform: uppercase;
-	grid-area: header;
-}
-#restaurants-list li {
-  margin: 0;
-  font-size: 11pt;
-	grid-area: post;
+  grid-area: header;
 }
 
-/* #restaurants-list div { Possibly needed deleted
-  display: none;
-	margin: 15px;
-  padding: 20px;
-	height: 20vw;
-	z-index: 1; */
-}
 #restaurants-list li a {
-  background-color: orange;
-  border-bottom: 3px solid #eee;
-  color: #fff;
-  display: inline-block;
-  font-size: 10pt;
-  margin: 15px 0 0;
-  padding: 8px 30px 10px;
+  border: 2px dashed #000000;
+  border-radius: 20px;
+  margin: 0px;
+  padding: 2vw;
+  color: black;
+  font-weight: bold;
+  background-color: whitesmoke;
   text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
+  width: 33%;
+}
+#restaurants-list .neighborhood-name {
+  margin-bottom: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 2vw;
+  font-size: 5vw;
+  font-weight: bolder;
+  }
+#restaurants-list .address-name {
+  margin-top: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 2vw;
+  font-size: 4vw;
 }
 /* ====================== Restaurant Details ====================== */
 .inside header {
